@@ -1,16 +1,9 @@
-const http = require('http')
-const routes = require('./routes.js')
-// function rqListener(req, res){
+const http = require('http');
+const express = require('express');
 
-// }
 
-// http.createServer(rqListener)
+const app = express();
 
-// alternate way to write the above
+const server = http.createServer(app);
 
-//store the http createServer inside constant
-const server = http.createServer(routes.handler)
-
-//listen to the server you created
-//use the port you want as the argument
 server.listen(3000)
