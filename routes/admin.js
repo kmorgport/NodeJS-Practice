@@ -3,7 +3,7 @@ const express = requires('express');
 const router = express.Router();
 
 router.get('/add-product',(req,res,next)=>{
-    res.send('<form action="/product" method="POST"><input type="text" name="title"><button type="submit">Add Product</button></form>')
+    res.send('<form action="/admin/add-product" method="POST"><input type="text" name="title"><button type="submit">Add Product</button></form>')
     //dont use next, you dont want to send more than one response or 
     //it will cause an error
 })
