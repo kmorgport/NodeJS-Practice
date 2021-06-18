@@ -12,8 +12,9 @@ router.get('/add-product',(req,res,next)=>{
 
 //get will only fire for incoming get requests
 //.post will only fire for incoming post requests
-router.post('/product',(req,res,next)=>{
+router.post('/add-product',(req,res,next)=>{
     console.log(req.body)
+    //when a post request is recognized, it will automatically default back to the '/'
     res.redirect('/')
 })
 
