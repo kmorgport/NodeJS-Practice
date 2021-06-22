@@ -17,6 +17,7 @@ const shopRoutes = require('./routes/shop.js')
 
 //allows you to call req.body
 app.use(bodyParser.urlencoded({extended: false}));
+//allows to see inside public folder for css files
 app.use(express.static(path.join(__dirname,'public')))
 
 
