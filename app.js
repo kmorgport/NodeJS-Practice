@@ -1,5 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser')
+
+const errorController = require('./controllers/error');
+
 const path = require('path')
 
 const app = express();
@@ -40,8 +43,6 @@ app.use('/admin',adminRoutes);
 //this is the default that just requires '/'
 app.use(shopRoutes);
 
-app.use((req,res,next)=>{
-    res.status(404).sendFile(path.join(__dirname,'views','404.html'))
-})
+app.use(errorController.get404)
 
 app.listen(3000)
