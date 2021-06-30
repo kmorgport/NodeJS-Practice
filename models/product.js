@@ -3,12 +3,13 @@ const path = require('path')
 
 const products = [];
 
+const p = path.join(
+    path.dirname(process.mainModule.filename), 
+    'data',
+    'products.json'
+    );
+
 const getProductsFromFile = cb => {
-    const p = path.join(
-        path.dirname(process.mainModule.filename), 
-        'data',
-        'products.json'
-        );
         fs.readFile(p, (err, fileContent)=>{
             if(err){
                 return cb([])
