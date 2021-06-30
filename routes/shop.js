@@ -5,9 +5,15 @@ const express = require('express');
 // const adminData = require('./admin')
 
 
-const productsController = require('../controllers/prodcuts')
+const shopController = require('../controllers/shop')
 const router = express.Router();
 
-router.get('/', productsController.getProducts)
+router.get('/', shopController.getIndex)
+
+router.get('/products', shopController.get);
+
+router.get('/cart', shopController.getCart);
+
+router.get('/checkout', shopController.getCheckout)
 
 module.exports = router;

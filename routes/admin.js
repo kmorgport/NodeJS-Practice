@@ -3,22 +3,25 @@ const path = require('path');
 
 // const rootDir = require('../util/path');
 
-const productsController = require('../controllers/products');
+const adminController = require('../controllers/admin');
 const router = express.Router();
 
 
 const products = [];
 router.get('/add-product',
-    productsController.getAddProduct
+    adminController.getAddProduct
     // res.sendFile(path.join(rootDir, 'views','add-product.html'))
 
     //dont use next, you dont want to send more than one response or 
     //it will cause an error
 )
 
+router.get('/products', adminController.getAddProduct);
+
+
 //get will only fire for incoming get requests
 //.post will only fire for incoming post requests
-router.post('/add-product', productsController.postAddProduct)
+router.post('/add-product', adminController.postAddProduct)
     //express allows you to just console.log the req.body by using the bodyparser
     //when a post request is recognized, it will automatically default back to the '/')
 
