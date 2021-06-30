@@ -16,7 +16,7 @@ router.get('/add-product',
     //it will cause an error
 )
 
-router.get('/products', adminController.getAddProduct);
+router.get('/products', adminController.getProducts);
 
 
 //get will only fire for incoming get requests

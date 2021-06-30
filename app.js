@@ -13,10 +13,10 @@ const expressHbs = require('express-handlebars');
 
 
 //activates the engine that express can use
-app.engine('handlebars', expressHbs({
-    layoutsDir: 'views/layouts/',
-    defaultLayout: 'main-layout'
-    }))
+// app.engine('handlebars', expressHbs({
+//     layoutsDir: 'views/layouts/',
+//     defaultLayout: 'main-layout'
+//     }))
 
 
 //set values globally on the app object
