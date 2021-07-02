@@ -27,6 +27,14 @@ exports.getProducts = (req, res, next) =>{
     // const products = Product.fetchAll();
 }
 
+//params has to match what comes after the colon
+exports.getProduct = (req, res, next) => {
+    const prodId = req.params.productId;
+    Product.findById(prodId, product => {
+        console.log(product);
+    })
+}
+
 exports.getIndex = (req, res, next) =>{
     Product.fetchAll((products)=>{
         res.render('shop/index',{

@@ -12,6 +12,10 @@ router.get('/', shopController.getIndex)
 
 router.get('/products', shopController.get);
 
+
+//always put the dynamic segment last.
+router.get('/products/:productId');
+
 router.get('/cart', shopController.getCart);
 
 router.get('/orders', shopController.getOrders);
