@@ -14,9 +14,11 @@ router.get('/products', shopController.get);
 
 
 //always put the dynamic segment last.
-router.get('/products/:productId');
+router.get('/products/:productId', shopController.getProduct);
 
 router.get('/cart', shopController.getCart);
+
+router.post('/cart',)
 
 router.get('/orders', shopController.getOrders);
 
