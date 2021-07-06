@@ -16,6 +16,7 @@ router.get('/add-product',
     //it will cause an error
 )
 
+// /admin/add-product
 router.get('/products', adminController.getProducts);
 
 
@@ -25,6 +26,7 @@ router.post('/add-product', adminController.postAddProduct)
     //express allows you to just console.log the req.body by using the bodyparser
     //when a post request is recognized, it will automatically default back to the '/')
 
+router.get('/edit-product/:productId', adminController.getEditProduct)
 // module.exports = router;
 // exports.routes = router
 // exports.products = products
