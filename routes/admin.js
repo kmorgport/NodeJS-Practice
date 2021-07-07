@@ -27,6 +27,8 @@ router.post('/add-product', adminController.postAddProduct)
     //when a post request is recognized, it will automatically default back to the '/')
 
 router.get('/edit-product/:productId', adminController.getEditProduct)
+
+router.post('/edit-product', adminController.postEditProduct)
 // module.exports = router;
 // exports.routes = router
 // exports.products = products
