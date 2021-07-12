@@ -31,6 +31,8 @@ app.set('views', 'views');
 const adminRoutes = require('./routes/admin')
 const shopRoutes = require('./routes/shop.js')
 
+
+
 //allows you to call req.body
 app.use(bodyParser.urlencoded({extended: false}));
 //allows to see inside public folder for css files
